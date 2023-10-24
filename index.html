@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>coconut</title>
+
+          <!--    -->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+          
+          
+                  <!--    -->
+              </head>
+              <body>
+          
+          <!--   -->
+                  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                      <!-- Brand -->
+                      <a class="navbar-brand" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#8/16.667/99.767">GIS</a>
+                      
+                      <ul class="navbar-nav">         
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            จังหวัด
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#11/16.7815/100.3234">จังหวัดพิษณุโลก</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#11/16.4144/100.3268">จังหวัดพิจิต</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#11/16.3537/100.9880">จังหวัดเพชรบูรณ์</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#11/16.4005/99.5509">จังหวัดกำแพงเพชร</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#11/16.8821/99.2000">จังหวัดตาก</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#11/15.7057/100.0679">จังหวัดนครสวรรค์</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#11/17.0016/99.8166">จังหวัดสุโขทัย</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#12/15.3918/100.0197">จังหวัดอุทัยธานี</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_home/index.html#10/17.4817/100.3443">จังหวัดอุตรดิตถ์</a>
+                            
+                          </div>
+                        </li>
+          
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            พืชเศรษฐกิจ
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_2023_10_19-07_15_01_909082/index.html">ยางพารา</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_coconut/index.html#8/16.667/99.767">มะพร้าว</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_2023_10_19-07_25_05_226217/index.html">ลำไย</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_2023_10_19-07_48_30_882037/index.html">ทุเรียน</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_2023_10_19-07_42_51_934085/index.html">เงาะ</a>
+                            <a class="dropdown-item" href="file:///C:/Users/Win10Pro2022v9/AppData/Local/Temp/qgis2web/WEBQGIS/qgis2web_2023_10_19-07_35_28_898234/index.html">มังคุด</a>
+                            
+                          </div>
+                        </li>
+                      </ul>
+                    </nav>
+                    <br>
+                  <!--   -->
+
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/Amphoe_PROV_1.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+            highlightLayer.openPopup();
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        })
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+            if (bounds_group.getLayers().length) {
+                map.fitBounds(bounds_group.getBounds());
+            }
+        }
+        map.createPane('pane_ESRIWorldTopo_0');
+        map.getPane('pane_ESRIWorldTopo_0').style.zIndex = 400;
+        var layer_ESRIWorldTopo_0 = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+            pane: 'pane_ESRIWorldTopo_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 20
+        });
+        layer_ESRIWorldTopo_0;
+        map.addLayer(layer_ESRIWorldTopo_0);
+        function pop_Amphoe_PROV_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['AMP_NAME_T'] !== null ? autolinker.link(feature.properties['AMP_NAME_T'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['AMP_NAME_E'] !== null ? autolinker.link(feature.properties['AMP_NAME_E'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['TH_Provinc'] !== null ? autolinker.link(feature.properties['TH_Provinc'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['TH_Provi_1'] !== null ? autolinker.link(feature.properties['TH_Provi_1'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ClassCoconut_coconut'] !== null ? autolinker.link(feature.properties['ClassCoconut_coconut'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Amphoe_PROV_1_0(feature) {
+            switch(String(feature.properties['ClassCoconut_coconut'])) {
+                case 'พอใช้':
+                    return {
+                pane: 'pane_Amphoe_PROV_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(226,49,94,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'มาก':
+                    return {
+                pane: 'pane_Amphoe_PROV_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(161,61,188,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'มากที่สุด':
+                    return {
+                pane: 'pane_Amphoe_PROV_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(155,34,63,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'เหมาะสมน้อย':
+                    return {
+                pane: 'pane_Amphoe_PROV_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(226,153,209,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Amphoe_PROV_1');
+        map.getPane('pane_Amphoe_PROV_1').style.zIndex = 401;
+        map.getPane('pane_Amphoe_PROV_1').style['mix-blend-mode'] = 'normal';
+        var layer_Amphoe_PROV_1 = new L.geoJson(json_Amphoe_PROV_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Amphoe_PROV_1',
+            layerName: 'layer_Amphoe_PROV_1',
+            pane: 'pane_Amphoe_PROV_1',
+            onEachFeature: pop_Amphoe_PROV_1,
+            style: style_Amphoe_PROV_1_0,
+        });
+        bounds_group.addLayer(layer_Amphoe_PROV_1);
+        map.addLayer(layer_Amphoe_PROV_1);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'Amphoe_PROV<br /><table><tr><td style="text-align: center;"><img src="legend/Amphoe_PROV_1_พอใช0.png" /></td><td>พอใช้</td></tr><tr><td style="text-align: center;"><img src="legend/Amphoe_PROV_1_มาก1.png" /></td><td>มาก</td></tr><tr><td style="text-align: center;"><img src="legend/Amphoe_PROV_1_มากทสด2.png" /></td><td>มากที่สุด</td></tr><tr><td style="text-align: center;"><img src="legend/Amphoe_PROV_1_เหมาะสมนอย3.png" /></td><td>เหมาะสมน้อย</td></tr></table>': layer_Amphoe_PROV_1,"ESRI World Topo": layer_ESRIWorldTopo_0,},{collapsed:false}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_Amphoe_PROV_1.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['AMP_NAME_T'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'Tw Cen MT\', sans-serif;">' + layer.feature.properties['AMP_NAME_T']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Amphoe_PROV_1'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_Amphoe_PROV_1]);
+        map.on("zoomend", function(){
+            resetLabels([layer_Amphoe_PROV_1]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_Amphoe_PROV_1]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_Amphoe_PROV_1]);
+        });
+        </script>
+    </body>
+</html>
